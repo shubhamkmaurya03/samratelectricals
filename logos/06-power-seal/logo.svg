@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400"><defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE07A"/><stop offset=".55" stop-color="#F7B500"/><stop offset="1" stop-color="#E08A00"/></linearGradient>
+<linearGradient id="navy" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D3B8F"/><stop offset="1" stop-color="#0A1A45"/></linearGradient>
+<linearGradient id="maroon" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A3203A"/><stop offset="1" stop-color="#5E0B1C"/></linearGradient>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0057FF"/><stop offset="1" stop-color="#00C2FF"/></linearGradient></defs><circle cx="200" cy="200" r="194" fill="url(#navy)"/>
+<circle cx="200" cy="200" r="182" fill="none" stroke="url(#gold)" stroke-width="4"/>
+<circle cx="200" cy="200" r="122" fill="#14307A" stroke="url(#gold)" stroke-width="3"/>
+<path id="top" d="M48 200 A152 152 0 0 1 352 200" fill="none"/>
+<path id="bot" d="M30 200 A170 170 0 0 0 370 200" fill="none"/>
+<text font-family="Poppins" font-weight="800" font-size="30" fill="#FFFFFF" letter-spacing="3"><textPath href="#top" startOffset="50%" text-anchor="middle">SAMRAT ELECTRICALS</textPath></text>
+<text font-family="Poppins" font-weight="600" font-size="17" fill="#FFE07A" letter-spacing="3"><textPath href="#bot" startOffset="50%" text-anchor="middle">GOPALPUR · KORAUTA · VARANASI</textPath></text>
+<path d="M33 200 l5 -4 l5 4 l-5 4 Z M357 200 l5 -4 l5 4 l-5 4 Z" fill="#FFE07A"/>
+<path d="M234 180 A54 54 0 1 1 166 180" fill="none" stroke="url(#gold)" stroke-width="14" stroke-linecap="round"/>
+<path d="M208 150 L184 196 H200 L192 236 L220 184 H204 L214 150 Z" fill="#FFFFFF"/>
+<path d="M172 136 L167 108 L184 120 L200 100 L216 120 L233 108 L228 136 Z" fill="url(#gold)" stroke-linejoin="round"/>
+<rect x="171" y="132" width="58" height="7" rx="2" fill="url(#gold)"/></svg>

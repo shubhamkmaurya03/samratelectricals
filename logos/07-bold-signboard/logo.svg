@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" width="640" height="200"><defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE07A"/><stop offset=".55" stop-color="#F7B500"/><stop offset="1" stop-color="#E08A00"/></linearGradient>
+<linearGradient id="navy" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D3B8F"/><stop offset="1" stop-color="#0A1A45"/></linearGradient>
+<linearGradient id="maroon" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A3203A"/><stop offset="1" stop-color="#5E0B1C"/></linearGradient>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0057FF"/><stop offset="1" stop-color="#00C2FF"/></linearGradient></defs><rect width="640" height="200" rx="18" fill="#111111"/>
+<g><rect width="200" height="200" rx="18" fill="#FFD400"/>
+<path d="M66 70 L60 38 L80 52 L100 30 L120 52 L140 38 L134 70 Z" fill="#111"/>
+<path d="M112 80 L68 138 H96 L84 182 L134 116 H106 L120 80 Z" fill="#111"/></g>
+<text x="226" y="118" font-family="Bebas Neue" font-size="122" fill="#FFD400" textLength="390" lengthAdjust="spacing">SAMRAT</text>
+<text x="228" y="168" font-family="Poppins" font-weight="600" font-size="30" fill="#FFFFFF" textLength="388" lengthAdjust="spacing">ELECTRICALS</text>
+<g fill="#FFD400"><path d="M226 186 h14 l-8 8 h-14 Z"/><path d="M252 186 h14 l-8 8 h-14 Z"/><path d="M278 186 h14 l-8 8 h-14 Z"/><path d="M304 186 h14 l-8 8 h-14 Z"/><path d="M330 186 h14 l-8 8 h-14 Z"/><path d="M356 186 h14 l-8 8 h-14 Z"/><path d="M382 186 h14 l-8 8 h-14 Z"/><path d="M408 186 h14 l-8 8 h-14 Z"/><path d="M434 186 h14 l-8 8 h-14 Z"/><path d="M460 186 h14 l-8 8 h-14 Z"/><path d="M486 186 h14 l-8 8 h-14 Z"/><path d="M512 186 h14 l-8 8 h-14 Z"/><path d="M538 186 h14 l-8 8 h-14 Z"/><path d="M564 186 h14 l-8 8 h-14 Z"/><path d="M590 186 h14 l-8 8 h-14 Z"/></g></svg>

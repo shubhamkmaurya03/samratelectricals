@@ -6,9 +6,8 @@
 const CONFIG = {
   name: "Samrat Electricals",
   hindiName: "सम्राट इलेक्ट्रिकल्स",
-  // TODO: replace with the shop's real numbers (10 digits, no spaces)
-  phone: "9XXXXXXXXX",
-  whatsapp: "9XXXXXXXXX",
+  phone: "7905664929",
+  whatsapp: "7905664929",
   email: "", // optional, e.g. "samratelectricals@gmail.com"
   addressLine1: "Gopalpur, Korauta",
   addressLine2: "Varanasi, Uttar Pradesh",

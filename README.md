@@ -19,8 +19,8 @@ A fast, mobile-friendly static website (plain HTML, CSS and JavaScript — no bu
 All contact details live in **one place** — the `CONFIG` block at the top of `assets/js/main.js`:
 
 ```js
-phone: "9XXXXXXXXX",     // ← put the shop's 10-digit mobile number
-whatsapp: "9XXXXXXXXX",  // ← WhatsApp number (10 digits)
+phone: "7905664929",     // shop mobile number (10 digits)
+whatsapp: "7905664929",  // WhatsApp number (10 digits)
 email: "",               // optional
 hours: [...],            // shop timings
 social: { facebook: "", instagram: "", youtube: "" }, // optional links

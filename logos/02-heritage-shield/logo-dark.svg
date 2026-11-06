@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" width="640" height="200"><defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE07A"/><stop offset=".55" stop-color="#F7B500"/><stop offset="1" stop-color="#E08A00"/></linearGradient>
+<linearGradient id="navy" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D3B8F"/><stop offset="1" stop-color="#0A1A45"/></linearGradient>
+<linearGradient id="maroon" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A3203A"/><stop offset="1" stop-color="#5E0B1C"/></linearGradient>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0057FF"/><stop offset="1" stop-color="#00C2FF"/></linearGradient></defs><g transform="translate(18,18) scale(1.15)"><path d="M60 26 L106 40 V80 C106 110 86 130 60 142 C34 130 14 110 14 80 V40 Z" fill="url(#maroon)" stroke="url(#gold)" stroke-width="5" stroke-linejoin="round"/>
+<path d="M60 36 L97 47 V80 C97 104 80 121 60 131 C40 121 23 104 23 80 V47 Z" fill="none" stroke="#FFE07A" stroke-opacity=".55" stroke-width="1.5"/>
+<path d="M38 34 L34 10 L48 21 L60 4 L72 21 L86 10 L82 34 Z" fill="url(#gold)" stroke="#5E0B1C" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="37" y="30" width="46" height="8" rx="2.5" fill="url(#gold)" stroke="#5E0B1C" stroke-width="2.5"/>
+<text x="60" y="116" text-anchor="middle" font-family="Abril Fatface" font-size="70" fill="url(#gold)">S</text>
+<path d="M75 66 L64 84 H71 L67 97 L80 79 H73 L78 66 Z" fill="#FFF3C4"/></g>
+<text x="182" y="104" font-family="Abril Fatface" font-size="80" fill="#FFFFFF" textLength="430" lengthAdjust="spacing">SAMRAT</text>
+<rect x="184" y="124" width="180" height="2.5" fill="url(#gold)"/><rect x="432" y="124" width="180" height="2.5" fill="url(#gold)"/>
+<path d="M402 112 L388 128 H396 L392 140 L408 122 H399 L404 112 Z" fill="url(#gold)"/>
+<text x="184" y="172" font-family="Poppins" font-weight="600" font-size="28" fill="#FFE07A" textLength="428" lengthAdjust="spacing">ELECTRICALS</text></svg>
