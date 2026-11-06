@@ -21,7 +21,7 @@ All contact details live in **one place** — the `CONFIG` block at the top of `
 ```js
 phone: "7905664929",     // shop mobile number (10 digits)
 whatsapp: "7905664929",  // WhatsApp number (10 digits)
-email: "",               // optional
+email: "samratelectricalstore@gmail.com",
 hours: [...],            // shop timings
 social: { facebook: "", instagram: "", youtube: "" }, // optional links
 ```

@@ -8,7 +8,7 @@ const CONFIG = {
   hindiName: "सम्राट इलेक्ट्रिकल्स",
   phone: "7905664929",
   whatsapp: "7905664929",
-  email: "", // optional, e.g. "samratelectricals@gmail.com"
+  email: "samratelectricalstore@gmail.com",
   addressLine1: "Gopalpur, Korauta",
   addressLine2: "Varanasi, Uttar Pradesh",
   mapQuery: "Gopalpur, Korauta, Varanasi, Uttar Pradesh",
