@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Samrat Electricals, Gopalpur, Korauta, Varanasi</title>
+  <meta name="description" content="Visit, call or WhatsApp Samrat Electricals at Gopalpur, Korauta, Varanasi. Get directions, shop timings and send us an enquiry.">
+  <meta name="theme-color" content="#0a1a45">
+  <meta property="og:title" content="Contact Us | Samrat Electricals, Gopalpur, Korauta, Varanasi">
+  <meta property="og:description" content="Visit, call or WhatsApp Samrat Electricals at Gopalpur, Korauta, Varanasi. Get directions, shop timings and send us an enquiry.">
+  <meta property="og:image" content="assets/img/logo.png">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-mark.svg">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact</span></nav>
+        <h1>Get in Touch</h1>
+        <p>Call, WhatsApp or visit our shop — we'd love to help you find the right product.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="info-cards">
+          <div class="info-card reveal"><span class="info-card__ico" data-icon="pin"></span><div><h3>Shop Address</h3><p>Samrat Electricals<br>Gopalpur, Korauta,<br>Varanasi, Uttar Pradesh</p><p style="margin-top:6px"><a data-map-link href="#" style="color:var(--navy-700);font-weight:600">Get directions →</a></p></div></div>
+          <div class="info-card reveal"><span class="info-card__ico" data-icon="phone"></span><div><h3>Call Us</h3><p><a data-phone-link data-phone-text href="#"></a></p></div></div>
+          <div class="info-card reveal"><span class="info-card__ico" data-icon="whatsapp"></span><div><h3>WhatsApp</h3><p><a data-wa-link href="#">Chat with us for prices & offers</a></p></div></div>
+          <div class="info-card reveal" data-email><span class="info-card__ico" data-icon="mail"></span><div><h3>Email</h3><p><a href="#"></a></p></div></div>
+          <div class="info-card reveal"><span class="info-card__ico" data-icon="clock"></span><div style="flex:1"><h3>Shop Timings</h3><table class="hours"><tbody id="hours"></tbody></table></div></div>
+        </div>
+
+        <form class="form reveal" id="enquiry-form" novalidate>
+          <h2>Send an Enquiry</h2>
+          <p>Fill in your details and we'll continue the conversation on WhatsApp.</p>
+          <div class="form__row">
+            <div class="field"><label for="name">Your Name *</label><input id="name" name="name" required autocomplete="name" placeholder="e.g. Ramesh Kumar"></div>
+            <div class="field"><label for="phone">Mobile Number *</label><input id="phone" name="phone" type="tel" required pattern="[0-9+ ]{10,14}" autocomplete="tel" placeholder="10-digit mobile number"></div>
+          </div>
+          <div class="field"><label for="interest">Interested In</label><select id="interest" name="interest"></select></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us the product, brand, size or budget you have in mind…"></textarea></div>
+          <button class="btn btn--whatsapp btn--block" type="submit"><span data-icon="whatsapp"></span>Send via WhatsApp</button>
+          <p class="form__note">Your details are only used to reply to your enquiry.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--soft" style="padding-top:0;background:transparent">
+      <div class="container">
+        <div class="map reveal" data-map></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
