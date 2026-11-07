@@ -43,8 +43,14 @@ const ICONS = {
   ac: s('<rect x="2" y="4" width="20" height="9" rx="2"/><path d="M6 10h12"/><path d="M7 16.5v2M12 16v4M17 16.5v2"/>'),
   cooler: s('<rect x="5" y="2" width="14" height="20" rx="2.5"/><path d="M8 6h8M8 9h8M8 12h8"/><circle cx="12" cy="17" r="2"/>'),
   fan: s('<circle cx="12" cy="9" r="7"/><circle cx="12" cy="9" r="1.5"/><path d="M12 7.5c-.6-2.6 1.2-3.8 2.6-2.6M13.3 9.8c2.4.9 2.3 3.1.5 3.4M10.7 9.6c-2.1 1.4-3.8-.2-2.8-1.9"/><path d="M12 16v4M8 21h8"/>'),
-  kitchen: s('<path d="M7 3h10l-1.5 9h-7z"/><rect x="6" y="14" width="12" height="7" rx="2"/><path d="M10 12v2M14 12v2"/><circle cx="12" cy="17.5" r="1.2"/>'),
-  microwave: s('<rect x="2" y="5" width="20" height="14" rx="2"/><rect x="5" y="8" width="10" height="8" rx="1"/><path d="M18 9h.01M18 12h.01M18 15.5h.01"/>'),
+  induction: s('<rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="12" cy="11" r="4.5"/><circle cx="12" cy="11" r="2"/><path d="M7 16.5h2M11 16.5h2M15 16.5h2"/>'),
+  kettle: s('<path d="M7 9h8l1.5 11h-11z"/><path d="M8.5 6h5M11 4v2"/><path d="M16 11h2a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1.2"/><path d="M7.3 11.5L4 9"/><path d="M5 21h12"/>'),
+  blower: s('<rect x="3" y="3" width="18" height="15" rx="3"/><circle cx="12" cy="10.5" r="4.5"/><path d="M9.8 8.3l4.4 4.4M14.2 8.3l-4.4 4.4"/><path d="M8.5 18v3M15.5 18v3M6.5 21h4M13.5 21h4"/>'),
+  cable: s('<circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="3.5"/><path d="M10 6.5V3"/><path d="M17 10v6a3 3 0 0 0 3 3h2"/>'),
+  pipe: s('<path d="M3 6h10a8 8 0 0 1 8 8v7"/><path d="M3 12h10a2 2 0 0 1 2 2v7"/><path d="M3 6v6M15 21h6"/><path d="M8 6v6" opacity=".5"/>'),
+  fanbox: s('<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><path d="M12 8.5v3.5a1.5 1.5 0 0 0 3 0"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/>'),
+  lightbox: s('<rect x="3" y="3" width="18" height="18" rx="2"/><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M5.5 5.5h.01M18.5 5.5h.01M5.5 18.5h.01M18.5 18.5h.01"/><path d="M12 9.5v5M9.5 12h5" opacity=".5"/>'),
+  meter: s('<rect x="4" y="2" width="16" height="20" rx="2"/><rect x="7" y="5" width="10" height="5" rx="1"/><path d="M9 7.5h.01M12 7.5h.01M15 7.5h.01"/><circle cx="12" cy="15.5" r="3"/><path d="M12 15.5l1.6-1.6"/>'),
   lighting: s('<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/><path d="M12 7l-1.5 3h3L12 13"/>'),
   electrical: s('<rect x="4" y="4" width="16" height="16" rx="3"/><rect x="9" y="7" width="6" height="10" rx="1.5"/><path d="M12 9v2.5"/>'),
   power: s('<rect x="3" y="7" width="18" height="12" rx="2"/><path d="M7 7V5h3v2M14 7V5h3v2M7 13h3M14 13h3M15.5 11.5v3"/>'),
@@ -85,12 +91,12 @@ const CATEGORIES = [
   { id: "ac", name: "Air Conditioners", note: "Split · Window" },
   { id: "cooler", name: "Air Coolers", note: "Desert · Personal" },
   { id: "fan", name: "Fans", note: "Ceiling · Table · BLDC" },
-  { id: "kitchen", name: "Kitchen Appliances", note: "Mixer · Oven · Induction" },
   { id: "lighting", name: "Lighting", note: "LED · Decorative" },
-  { id: "electrical", name: "Wiring & Switches", note: "Wires · MCB · Modular" },
+  { id: "cable", name: "Wires & Cables", note: "House wire · Cable" },
+  { id: "electrical", name: "Wiring Accessories", note: "Pipe · Fan box · Light box" },
   { id: "power", name: "Inverters & Batteries", note: "Inverter · Stabilizer" },
-  { id: "water", name: "Water Heaters", note: "Instant · Storage geyser" },
-  { id: "iron", name: "Home Care", note: "Iron · Heater · Kettle" },
+  { id: "water", name: "Geysers", note: "Instant · Storage" },
+  { id: "iron", name: "Press, Induction & More", note: "Press · Kettle · Blower" },
 ];
 
 const PRODUCTS = [
@@ -99,22 +105,28 @@ const PRODUCTS = [
   { cat: "fridge", icon: "fridge", name: "Double Door & Frost-Free", desc: "Spacious frost-free refrigerators with inverter compressors and convertible modes.", brands: "Samsung · LG · Whirlpool" },
   { cat: "washer", icon: "washer", name: "Fully Automatic Washers", desc: "Top-load and front-load machines with multiple wash programs and inbuilt heaters.", brands: "LG · Samsung · IFB · Whirlpool", featured: true },
   { cat: "washer", icon: "washer", name: "Semi-Automatic Washers", desc: "Twin-tub machines — economical, water-efficient and easy to use.", brands: "Whirlpool · Godrej · LG" },
-  { cat: "ac", icon: "ac", name: "Inverter Split ACs", desc: "1 to 2 ton energy-saving inverter ACs with copper condenser and fast cooling.", brands: "Voltas · LG · Daikin · Lloyd", tag: "Summer Pick", featured: true },
+  { cat: "ac", icon: "ac", name: "Inverter Split ACs", desc: "1 to 2 ton energy-saving inverter ACs with copper condenser and fast cooling.", brands: "Voltas · LG · Daikin · Lloyd", tag: "Summer Pick" },
   { cat: "ac", icon: "ac", name: "Window ACs", desc: "Reliable window ACs for rooms and shops, easy to install and maintain.", brands: "Voltas · Lloyd · Blue Star" },
-  { cat: "cooler", icon: "cooler", name: "Desert & Personal Coolers", desc: "Powerful air throw, honeycomb pads and large tanks for Varanasi summers.", brands: "Bajaj · Symphony · Crompton", featured: true },
+  { cat: "cooler", icon: "cooler", name: "Desert & Personal Coolers", desc: "Powerful air throw, honeycomb pads and large tanks for Varanasi summers.", brands: "Bajaj · Symphony · Crompton" },
   { cat: "fan", icon: "fan", name: "Ceiling Fans & BLDC Fans", desc: "Decorative and high-speed ceiling fans, plus energy-saving BLDC models with remote.", brands: "Havells · Crompton · Orient · Usha", tag: "Energy Saver", featured: true },
   { cat: "fan", icon: "fan", name: "Table, Pedestal & Wall Fans", desc: "Portable fans and exhaust fans for every room, kitchen and bathroom.", brands: "Bajaj · Usha · Orient" },
-  { cat: "kitchen", icon: "kitchen", name: "Mixer Grinders & Juicers", desc: "500W–1000W mixers with stainless steel jars for daily grinding and juicing.", brands: "Bajaj · Prestige · Philips · Sujata", featured: true },
-  { cat: "kitchen", icon: "microwave", name: "Microwave Ovens & OTGs", desc: "Solo, grill and convection microwaves and OTGs for baking and reheating.", brands: "Samsung · LG · IFB · Bajaj" },
-  { cat: "kitchen", icon: "kitchen", name: "Induction & Electric Kettles", desc: "Induction cooktops, kettles, toasters and sandwich makers for a smart kitchen.", brands: "Prestige · Philips · Pigeon" },
-  { cat: "lighting", icon: "lighting", name: "LED Bulbs, Tubes & Panels", desc: "Bright, long-life LED lighting for homes, shops and offices at the best price.", brands: "Philips · Syska · Havells · Wipro", featured: true },
+  { cat: "lighting", icon: "lighting", name: "LED Bulbs, Tubes & Panels", desc: "Bright, long-life LED lighting for homes, shops and offices at the best price.", brands: "Philips · Syska · Havells · Wipro" },
   { cat: "lighting", icon: "lighting", name: "Decorative & Festive Lights", desc: "Strip lights, jhalars, wall lamps and fancy lights for every occasion.", brands: "Philips · Havells · Local brands" },
-  { cat: "electrical", icon: "electrical", name: "Modular Switches & Sockets", desc: "Stylish modular switches, sockets, plates and boards for new and old homes.", brands: "Anchor · Havells · Legrand · GM", featured: true },
-  { cat: "electrical", icon: "plug", name: "House Wires, MCBs & DBs", desc: "ISI-marked FR wires, MCBs, distribution boards and complete wiring material.", brands: "Polycab · Havells · Finolex · Anchor" },
-  { cat: "power", icon: "power", name: "Inverter & Battery Combos", desc: "Home UPS with tubular batteries to keep fans and lights running during power cuts.", brands: "Luminous · Microtek · Exide · Amaron", tag: "Power Backup", featured: true },
+  { cat: "cable", icon: "cable", name: "House Wires (FR / FRLS)", desc: "ISI-marked copper house wires from 0.75 to 6 sq mm — full coils or by the metre.", brands: "Polycab · Havells · Finolex · KEI", featured: true },
+  { cat: "cable", icon: "plug", name: "Cables", desc: "Multi-core flexible cables, main/service cables, submersible cables and TV & LAN cables.", brands: "Polycab · Havells · Finolex · RR Kabel" },
+  { cat: "electrical", icon: "pipe", name: "Wiring Pipes & Fittings", desc: "PVC conduit pipes in medium and heavy gauge with bends, junction boxes and saddles for concealed and surface wiring.", brands: "ISI-marked brands", featured: true },
+  { cat: "electrical", icon: "fanbox", name: "Fan Boxes", desc: "Concealed ceiling fan boxes with strong hooks for safe fan fitting in new roof slabs.", brands: "ISI-marked brands" },
+  { cat: "electrical", icon: "lightbox", name: "Light Boxes & Concealed Boxes", desc: "Ceiling light boxes and modular concealed boxes for switches and sockets — all module sizes.", brands: "Anchor · Havells · GM" },
+  { cat: "electrical", icon: "electrical", name: "Modular Switches & Sockets", desc: "Stylish modular switches, sockets, plates and boards for new and old homes.", brands: "Anchor · Havells · Legrand · GM" },
+  { cat: "electrical", icon: "bolt", name: "MCBs & Distribution Boards", desc: "MCBs, RCCBs, isolators and DB boxes to keep your home wiring safe.", brands: "Havells · Legrand · Schneider · Polycab" },
+  { cat: "electrical", icon: "meter", name: "Electric Meters", desc: "Single-phase and three-phase energy meters and sub-meters for homes, shops and tenants.", brands: "Single & three phase models" },
+  { cat: "power", icon: "power", name: "Inverter & Battery Combos", desc: "Home UPS with tubular batteries to keep fans and lights running during power cuts.", brands: "Luminous · Microtek · Exide · Amaron", tag: "Power Backup" },
   { cat: "power", icon: "bolt", name: "Voltage Stabilizers", desc: "Stabilizers for ACs, refrigerators and TVs to protect them from voltage fluctuation.", brands: "V-Guard · Microtek · Luminous" },
-  { cat: "water", icon: "water", name: "Instant & Storage Geysers", desc: "3L to 25L water heaters with safety valves and rust-proof tanks.", brands: "Havells · Bajaj · Crompton · AO Smith" },
-  { cat: "iron", icon: "iron", name: "Irons, Heaters & Home Care", desc: "Dry and steam irons, room heaters, hair dryers and other daily-use appliances.", brands: "Philips · Bajaj · Usha · Orpat" },
+  { cat: "water", icon: "water", name: "Geysers (Instant & Storage)", desc: "3L to 25L water heaters with safety valves and rust-proof tanks — hot water all winter.", brands: "Havells · Bajaj · Crompton · AO Smith", tag: "Winter Pick", featured: true },
+  { cat: "iron", icon: "iron", name: "Electric Press (Iron)", desc: "Dry and steam presses with non-stick soleplates — light, safe and quick for daily ironing.", brands: "Philips · Bajaj · Usha · Orpat" },
+  { cat: "iron", icon: "induction", name: "Induction Cooktops", desc: "Energy-saving induction chulhas with auto-cut, Indian cooking presets and touch controls.", brands: "Prestige · Philips · Pigeon · Bajaj" },
+  { cat: "iron", icon: "kettle", name: "Electric Kettles", desc: "1L to 1.8L stainless-steel kettles — tea, coffee and hot water in minutes.", brands: "Prestige · Pigeon · Philips · Bajaj" },
+  { cat: "iron", icon: "blower", name: "Room Heater Blowers", desc: "Fan heaters / blowers for quick warmth in winter, with thermostat and overheat protection.", brands: "Bajaj · Usha · Orpat · Havells", tag: "Winter Pick", featured: true },
 ];
 
 const BRANDS = ["LG", "Samsung", "Sony", "Whirlpool", "Godrej", "Haier", "Voltas", "Daikin", "Bajaj", "Havells", "Crompton", "Orient", "Usha", "Philips", "Syska", "Prestige", "Polycab", "Anchor", "Luminous", "Exide", "V-Guard", "Symphony"];
@@ -195,7 +207,7 @@ function renderFooter() {
         </div>
         <div>
           <h4>Categories</h4>
-          <ul>${CATEGORIES.slice(0, 7).map((c) => `<li><a href="products.html?cat=${c.id}#catalog">${c.name}</a></li>`).join("")}</ul>
+          <ul>${CATEGORIES.slice(0, 8).map((c) => `<li><a href="products.html?cat=${c.id}#catalog">${c.name}</a></li>`).join("")}</ul>
         </div>
         <div>
           <h4>Visit Our Shop</h4>
